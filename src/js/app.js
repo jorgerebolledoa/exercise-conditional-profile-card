@@ -56,11 +56,34 @@ function render(variables = {}) {
   } else {
     city = variables.city;
   }
-  let socialMediaPosition = "position-left";
-  if (variables.socialMediaPosition == null) {
+  let socialMediaPosition;
+  if (variables.socialMediaPosition == `position-left`)
     socialMediaPosition = "position-left";
+  else socialMediaPosition = "position-right";
+
+  let twitter = "https://twitter.com/4geeksacademy";
+  if (variables.twitter === null) {
+    twitter = "https://twitter.com/4geeksacademy";
   } else {
-    socialMediaPosition = "position-right";
+    twitter = variables.twitter;
+  }
+  let github = "https://github.com/4geeksacademy";
+  if (variables.github === null) {
+    github = "https://github.com/4geeksacademy";
+  } else {
+    github = variables.github;
+  }
+  let linkedin = "https://linkedin.com/4geeksacademy";
+  if (variables.linkedin === null) {
+    linkedin = "https://linkedin.com/4geeksacademy";
+  } else {
+    linkedin = variables.linkedin;
+  }
+  let instagram = "https://instagram.com/4geeksacademy";
+  if (variables.instagram === null) {
+    instagram = "https://instagram.com/4geeksacademy";
+  } else {
+    instagram = variables.instagram;
   }
 
   // reset the website body with the new html output
@@ -70,11 +93,11 @@ function render(variables = {}) {
           <h1>${name} ${lastname}</h1>
           <h2>${role}</h2>
           <h3>${city},${country} </h3>
-          <ul class=${socialMediaPosition}>
-            <li><a href="https://twitter.com/4geeksacademy"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/4geeksacademy"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/4geeksacademy"><i class="fab fa-instagram"></i></a></li>
+          <ul class="${socialMediaPosition}">
+            <li><a href="${twitter}"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="${github}"><i class="fab fa-github"></i></a></li>
+            <li><a href="${linkedin}"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="${instagram}"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
@@ -93,7 +116,7 @@ window.onload = function() {
     avatarURL: "https://randomuser.me/api/portraits/women/42.jpg",
     // social media bar position (left or right)
     socialMediaPosition: "position-left",
-    // social media usernames
+    // social media usernamesn
     twitter: null,
     github: "alesanchezr",
     linkedin: null,
