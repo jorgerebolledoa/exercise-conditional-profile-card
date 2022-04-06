@@ -28,15 +28,15 @@ function render(variables = {}) {
   // if includeCover==false then we reset the cover code without the <img> tag to make the cover transparent.
   let cover = `<div class="cover"><img src="${variables.background}" /></div>`;
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
-  let name = "Lucy";
+  let name = "Jorge";
   if (variables.name === null) {
-    name = "Lucy";
+    name = "Jorge";
   } else {
     name = variables.name;
   }
-  let lastname = "Boilett";
+  let lastname = "Rebolledo";
   if (variables.lastname === null) {
-    lastname = "Boilett";
+    lastname = "Rebolledo";
   } else {
     lastname = variables.lastname;
   }
@@ -46,13 +46,13 @@ function render(variables = {}) {
   } else {
     role = variables.role;
   }
-  let country = "USA";
+  let country = "Chile";
   if (variables.country === null) {
-    country = "USA";
+    country = "Chile";
   } else country = variables.country;
-  let city = "Miami";
+  let city = "Santiago";
   if (variables.city === null) {
-    city = "Miami";
+    city = "Santiago";
   } else {
     city = variables.city;
   }
@@ -96,7 +96,7 @@ function render(variables = {}) {
           <ul class="${socialMediaPosition}">
             <li><a href="https://twitter.com/${twitter}" target="_blank"><i class="fab fa-twitter"></i></a></li>
             <li><a href="https://github.com/${github}" target="_blank"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/${linkedin} target="_blank""><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://linkedin.com/${linkedin}" target="_blank"><i class="fab fa-linkedin"></i></a></li>
             <li><a href="https://instagram.com/${instagram}" target="_blank"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
@@ -111,18 +111,18 @@ window.onload = function() {
     // if includeCover is true the algorithm should
     includeCover: true,
     // this is the url of the image that will used as background for the profile cover
-    background: "https://images.unsplash.com/photo-1511974035430-5de47d3b95da",
+    background: "https://picsum.photos/id/1/200/100",
     // this is the url for the profile avatar
-    avatarURL: "https://randomuser.me/api/portraits/women/42.jpg",
+    avatarURL: "https://picsum.photos/id/4/200/200",
     // social media bar position (left or right)
     socialMediaPosition: "position-left",
     // social media usernamesn
     twitter: null,
     github: "alesanchezr",
-    linkedin: null,
     instagram: null,
     name: null,
     lastname: null,
+
     role: null,
     country: null,
     city: null
